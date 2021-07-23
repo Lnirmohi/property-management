@@ -1,0 +1,19 @@
+.drawer-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.drawer-container__drawer {
+    padding: 2rem 1rem;
+}
+
+.drawer-content {
+    padding: 2rem 1.5rem;
+}
+
+.properties-container {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+}

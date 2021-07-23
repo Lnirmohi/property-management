@@ -1,0 +1,23 @@
+<mat-accordion>
+    <mat-expansion-panel expanded class="property-panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="property-title">
+                {{property.name | titlecase}}
+              </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <section class="section">
+            <p class="section__heading">Description: </p>
+            <p class="section__description">{{property.description}}</p>
+        </section>
+        <section class="section">
+            <p class="section__heading">Size: </p>
+            <p class="section__description">{{property.size}} sq ft</p>
+        </section>
+
+        <div class="property-actions">
+            <button mat-raised-button color="primary" disabled>View</button>
+            <button mat-raised-button color="warn" (click)="handleDelete()">Delete</button>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
