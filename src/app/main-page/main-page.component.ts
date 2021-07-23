@@ -1,6 +1,7 @@
+import mockProperties from 'src/mockProperty';
+
 import { AddPropertyDialogComponent } from './add-property-dialog/add-property-dialog.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import mockProperties from 'src/mockProperty';
 import { Component, OnInit } from '@angular/core';
 import { Property } from '../shared/property';
 
@@ -30,10 +31,11 @@ export class MainPageComponent implements OnInit {
     const dialogRef = this.dialog.open(AddPropertyDialogComponent, addPropertyDialogConfig);
 
     dialogRef.afterClosed().subscribe(formData => {
-      const [name, description, size] = [...formData];
+
+      console.log(formData);
 
       this.propertyList.push(
-        new Property(this.propertyList.length + 1, name, description, size)
+        new Property(this.propertyList.length + 1, formData.name, formData.description, formData.size)
       );
     });
   }

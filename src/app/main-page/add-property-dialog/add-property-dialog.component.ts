@@ -25,7 +25,7 @@ export class AddPropertyDialogComponent implements OnInit {
   }
 
   handleSubmit() {
-    this.dialogRef.close(this.addPropertyForm.value);
+    this.dialogRef.close({...this.addPropertyForm.value});
     this.addPropertyForm.reset();
   }
 
