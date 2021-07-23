@@ -32,7 +32,7 @@ export class MainPageComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(formData => {
 
-      console.log(formData);
+      // console.log(formData);
 
       this.propertyList.push(
         new Property(this.propertyList.length + 1, formData.name, formData.description, formData.size)
