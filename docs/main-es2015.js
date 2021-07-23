@@ -205,7 +205,7 @@ class AddPropertyDialogComponent {
         });
     }
     handleSubmit() {
-        this.dialogRef.close(this.addPropertyForm.value);
+        this.dialogRef.close(Object.assign({}, this.addPropertyForm.value));
         this.addPropertyForm.reset();
     }
     close() {
@@ -289,9 +289,9 @@ AddPropertyDialogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageComponent", function() { return MainPageComponent; });
-/* harmony import */ var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-property-dialog/add-property-dialog.component */ "./src/app/main-page/add-property-dialog/add-property-dialog.component.ts");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/fesm2015/dialog.js");
-/* harmony import */ var src_mockProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/mockProperty */ "./src/mockProperty.ts");
+/* harmony import */ var src_mockProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/mockProperty */ "./src/mockProperty.ts");
+/* harmony import */ var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-property-dialog/add-property-dialog.component */ "./src/app/main-page/add-property-dialog/add-property-dialog.component.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/fesm2015/dialog.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _shared_property__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared/property */ "./src/app/shared/property.ts");
 /* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/fesm2015/sidenav.js");
@@ -326,18 +326,18 @@ function MainPageComponent_ng_container_14_Template(rf, ctx) { if (rf & 1) {
 class MainPageComponent {
     constructor(dialog) {
         this.dialog = dialog;
-        this.propertyList = [...src_mockProperty__WEBPACK_IMPORTED_MODULE_2__["default"]];
+        this.propertyList = [...src_mockProperty__WEBPACK_IMPORTED_MODULE_0__["default"]];
     }
     ngOnInit() {
     }
     addPropertyToList() {
-        const addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogConfig"]();
+        const addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
         addPropertyDialogConfig.disableClose = true;
         addPropertyDialogConfig.autoFocus = true;
-        const dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__["AddPropertyDialogComponent"], addPropertyDialogConfig);
+        const dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__["AddPropertyDialogComponent"], addPropertyDialogConfig);
         dialogRef.afterClosed().subscribe(formData => {
-            const [name, description, size] = [...formData];
-            this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_4__["Property"](this.propertyList.length + 1, name, description, size));
+            console.log(formData);
+            this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_4__["Property"](this.propertyList.length + 1, formData.name, formData.description, formData.size));
         });
     }
     deleteProperty(property) {
@@ -348,7 +348,7 @@ class MainPageComponent {
         }
     }
 }
-MainPageComponent.ɵfac = function MainPageComponent_Factory(t) { return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"])); };
+MainPageComponent.ɵfac = function MainPageComponent_Factory(t) { return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"])); };
 MainPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: MainPageComponent, selectors: [["app-main-page"]], decls: 15, vars: 1, consts: [[1, "drawer-container"], ["mode", "side", "opened", "", 1, "drawer-container__drawer"], ["drawer", ""], [1, "menu"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "drawer-content"], [1, "properties-container"], [4, "ngFor", "ngForOf"], [3, "property", "deletePropertyEvent"]], template: function MainPageComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-drawer-container", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "mat-drawer", 1, 2);
@@ -385,7 +385,7 @@ MainPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefine
                 templateUrl: './main-page.component.html',
                 styleUrls: ['./main-page.component.scss']
             }]
-    }], function () { return [{ type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"] }]; }, null); })();
+    }], function () { return [{ type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }]; }, null); })();
 
 
 /***/ }),

@@ -352,7 +352,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "handleSubmit",
         value: function handleSubmit() {
-          this.dialogRef.close(this.addPropertyForm.value);
+          this.dialogRef.close(Object.assign({}, this.addPropertyForm.value));
           this.addPropertyForm.reset();
         }
       }, {
@@ -526,21 +526,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    var src_mockProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! src/mockProperty */
+    "./src/mockProperty.ts");
+    /* harmony import */
+
+
+    var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ./add-property-dialog/add-property-dialog.component */
     "./src/app/main-page/add-property-dialog/add-property-dialog.component.ts");
     /* harmony import */
 
 
-    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/fesm2015/dialog.js");
-    /* harmony import */
-
-
-    var src_mockProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/mockProperty */
-    "./src/mockProperty.ts");
     /* harmony import */
 
 
@@ -621,7 +621,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, MainPageComponent);
 
         this.dialog = dialog;
-        this.propertyList = _toConsumableArray(src_mockProperty__WEBPACK_IMPORTED_MODULE_2__["default"]);
+        this.propertyList = _toConsumableArray(src_mockProperty__WEBPACK_IMPORTED_MODULE_0__["default"]);
       }
 
       _createClass(MainPageComponent, [{
@@ -632,17 +632,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function addPropertyToList() {
           var _this = this;
 
-          var addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogConfig"]();
+          var addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
           addPropertyDialogConfig.disableClose = true;
           addPropertyDialogConfig.autoFocus = true;
-          var dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__["AddPropertyDialogComponent"], addPropertyDialogConfig);
+          var dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__["AddPropertyDialogComponent"], addPropertyDialogConfig);
           dialogRef.afterClosed().subscribe(function (formData) {
-            var _ref = _toConsumableArray(formData),
-                name = _ref[0],
-                description = _ref[1],
-                size = _ref[2];
+            console.log(formData);
 
-            _this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_4__["Property"](_this.propertyList.length + 1, name, description, size));
+            _this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_4__["Property"](_this.propertyList.length + 1, formData.name, formData.description, formData.size));
           });
         }
       }, {
@@ -663,7 +660,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     MainPageComponent.ɵfac = function MainPageComponent_Factory(t) {
-      return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]));
+      return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]));
     };
 
     MainPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
@@ -746,7 +743,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]
+          type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]
         }];
       }, null);
     })();
