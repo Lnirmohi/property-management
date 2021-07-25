@@ -1,15 +1,3 @@
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -205,45 +193,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./app.component */
-    "./src/app/app.component.ts");
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @angular/platform-browser/animations */
     "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
     /* harmony import */
 
 
-    var _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./app.component */
+    "./src/app/app.component.ts");
+    /* harmony import */
+
+
+    var _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./main-page/main-page.component */
     "./src/app/main-page/main-page.component.ts");
     /* harmony import */
 
 
-    var _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./main-page/property-display/property-display.component */
     "./src/app/main-page/property-display/property-display.component.ts");
     /* harmony import */
 
 
-    var _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./main-page/add-property-dialog/add-property-dialog.component */
     "./src/app/main-page/add-property-dialog/add-property-dialog.component.ts");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    var ngx_airtable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ngx-airtable */
+    "./node_modules/ngx-airtable/fesm2015/ngx-airtable.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -251,20 +251,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
       type: AppModule,
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     });
     AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
       factory: function AppModule_Factory(t) {
         return new (t || AppModule)();
       },
       providers: [],
-      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"]]]
+      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_airtable__WEBPACK_IMPORTED_MODULE_11__["NgxAirtableModule"].forRoot()]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_6__["MainPageComponent"], _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_7__["PropertyDisplayComponent"], _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_8__["AddPropertyDialogComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"]]
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_8__["MainPageComponent"], _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_9__["PropertyDisplayComponent"], _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_10__["AddPropertyDialogComponent"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_airtable__WEBPACK_IMPORTED_MODULE_11__["NgxAirtableModule"]]
       });
     })();
     /*@__PURE__*/
@@ -274,10 +274,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_6__["MainPageComponent"], _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_7__["PropertyDisplayComponent"], _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_8__["AddPropertyDialogComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _main_page_main_page_component__WEBPACK_IMPORTED_MODULE_8__["MainPageComponent"], _main_page_property_display_property_display_component__WEBPACK_IMPORTED_MODULE_9__["PropertyDisplayComponent"], _main_page_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_10__["AddPropertyDialogComponent"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"], _shared_material_module__WEBPACK_IMPORTED_MODULE_0__["MaterialModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_airtable__WEBPACK_IMPORTED_MODULE_11__["NgxAirtableModule"].forRoot()],
           providers: [],
-          bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+          bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         }]
       }], null, null);
     })();
@@ -535,33 +535,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_mockProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! src/mockProperty */
-    "./src/mockProperty.ts");
-    /* harmony import */
-
-
-    var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! ./add-property-dialog/add-property-dialog.component */
     "./src/app/main-page/add-property-dialog/add-property-dialog.component.ts");
     /* harmony import */
 
 
-    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/fesm2015/dialog.js");
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var _shared_property__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _shared_property__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../shared/property */
     "./src/app/shared/property.ts");
+    /* harmony import */
+
+
+    var _services_manage_property_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./../services/manage-property.service */
+    "./src/app/services/manage-property.service.ts");
     /* harmony import */
 
 
@@ -595,71 +595,93 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function MainPageComponent_ng_container_14_Template(rf, ctx) {
       if (rf & 1) {
-        var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
+        var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "app-property-display", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "app-property-display", 8);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("deletePropertyEvent", function MainPageComponent_ng_container_14_Template_app_property_display_deletePropertyEvent_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("deletePropertyEvent", function MainPageComponent_ng_container_14_Template_app_property_display_deletePropertyEvent_1_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r4);
 
-          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
 
           return ctx_r3.deleteProperty($event);
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
       }
 
       if (rf & 2) {
         var currentProperty_r2 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("property", currentProperty_r2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("property", currentProperty_r2);
       }
     }
 
     var MainPageComponent =
     /*#__PURE__*/
     function () {
-      function MainPageComponent(dialog) {
+      function MainPageComponent(dialog, manageProperty) {
         _classCallCheck(this, MainPageComponent);
 
         this.dialog = dialog;
-        this.propertyList = _toConsumableArray(src_mockProperty__WEBPACK_IMPORTED_MODULE_0__["default"]);
+        this.manageProperty = manageProperty;
+        this.propertyList = [];
       }
 
       _createClass(MainPageComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.getPropertyList();
+        }
+      }, {
+        key: "getPropertyList",
+        value: function getPropertyList() {
+          var _this = this;
+
+          this.manageProperty.getPropertyList().subscribe(function (records) {
+            records.forEach(function (record) {
+              _this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_3__["Property"](record.id, record.fields.name, record.fields.description, record.fields.size));
+            });
+          });
+        }
       }, {
         key: "addPropertyToList",
         value: function addPropertyToList() {
-          var _this = this;
+          var _this2 = this;
 
-          var addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
+          var addPropertyDialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogConfig"]();
           addPropertyDialogConfig.disableClose = true;
           addPropertyDialogConfig.autoFocus = true;
-          var dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_1__["AddPropertyDialogComponent"], addPropertyDialogConfig);
+          var dialogRef = this.dialog.open(_add_property_dialog_add_property_dialog_component__WEBPACK_IMPORTED_MODULE_0__["AddPropertyDialogComponent"], addPropertyDialogConfig);
           dialogRef.afterClosed().subscribe(function (formData) {
-            // console.log(formData);
-            _this.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_4__["Property"](_this.propertyList.length + 1, formData.name, formData.description, formData.size));
+            _this2.manageProperty.addProperty(new _shared_property__WEBPACK_IMPORTED_MODULE_3__["Property"](null, formData.name, formData.description, formData.size)).subscribe(function (data) {
+              _this2.propertyList.push(new _shared_property__WEBPACK_IMPORTED_MODULE_3__["Property"](data.id, data.fields.name, data.fields.description, data.fields.size));
+            });
+            /*   */
+
           });
         }
       }, {
         key: "deleteProperty",
         value: function deleteProperty(property) {
+          var _this3 = this;
+
           var confirmation = confirm('Delete property: ' + property.name);
-          var deletedProperty;
 
           if (confirmation) {
-            deletedProperty = this.propertyList.splice(this.propertyList.findIndex(function (item) {
-              return item.id === property.id;
-            }), 1);
+            this.manageProperty.deleteProperty(property.id).subscribe(function (data) {
+              if (data.deleted) {
+                _this3.propertyList.splice(_this3.propertyList.findIndex(function (item) {
+                  return item.id === property.id;
+                }), 1);
+              }
+            });
           }
         }
       }]);
@@ -668,10 +690,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     MainPageComponent.ɵfac = function MainPageComponent_Factory(t) {
-      return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]));
+      return new (t || MainPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_services_manage_property_service__WEBPACK_IMPORTED_MODULE_4__["ManagePropertyService"]));
     };
 
-    MainPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+    MainPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
       type: MainPageComponent,
       selectors: [["app-main-page"]],
       decls: 15,
@@ -679,61 +701,61 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[1, "drawer-container"], ["mode", "side", "opened", "", 1, "drawer-container__drawer"], ["drawer", ""], [1, "menu"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "drawer-content"], [1, "properties-container"], [4, "ngFor", "ngForOf"], [3, "property", "deletePropertyEvent"]],
       template: function MainPageComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-drawer-container", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "mat-drawer-container", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "mat-drawer", 1, 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "mat-drawer", 1, 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "h2");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "h2");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](5, " Menu ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, " Menu ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "button", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "button", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function MainPageComponent_Template_button_click_6_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function MainPageComponent_Template_button_click_6_listener() {
             return ctx.addPropertyToList();
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "mat-icon");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "mat-icon");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8, "add");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8, "add");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9, "Add property ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](9, "Add property ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "mat-drawer-content", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "mat-drawer-content", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](11, "h1");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "h1");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, "Property list");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "Property list");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, MainPageComponent_ng_container_14_Template, 2, 1, "ng-container", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, MainPageComponent_ng_container_14_Template, 2, 1, "ng-container", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.propertyList);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.propertyList);
         }
       },
       directives: [_angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__["MatDrawerContainer"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__["MatDrawer"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__["MatIcon"], _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_5__["MatDrawerContent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _property_display_property_display_component__WEBPACK_IMPORTED_MODULE_9__["PropertyDisplayComponent"]],
@@ -742,8 +764,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*@__PURE__*/
 
     (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](MainPageComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](MainPageComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
         args: [{
           selector: 'app-main-page',
           templateUrl: './main-page.component.html',
@@ -751,7 +773,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]
+          type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]
+        }, {
+          type: _services_manage_property_service__WEBPACK_IMPORTED_MODULE_4__["ManagePropertyService"]
         }];
       }, null);
     })();
@@ -946,6 +970,175 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }]
       });
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/services/airtable.service.ts": function srcAppServicesAirtableServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AirtableService", function () {
+      return AirtableService;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var ngx_airtable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ngx-airtable */
+    "./node_modules/ngx-airtable/fesm2015/ngx-airtable.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+
+    var AirtableService =
+    /*#__PURE__*/
+    function () {
+      function AirtableService(http) {
+        _classCallCheck(this, AirtableService);
+
+        this.http = http;
+        this.base = new ngx_airtable__WEBPACK_IMPORTED_MODULE_1__["Airtable"](this.http, {
+          apiKey: 'keyPyDOMPXIltW7Bw'
+        }).base('appW7DYNYwUXpt4tA');
+        this.table = this.base.table({
+          tableName: 'property-list'
+        });
+      }
+
+      _createClass(AirtableService, [{
+        key: "getTable",
+        value: function getTable() {
+          return this.table;
+        }
+      }]);
+
+      return AirtableService;
+    }();
+
+    AirtableService.ɵfac = function AirtableService_Factory(t) {
+      return new (t || AirtableService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+    };
+
+    AirtableService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: AirtableService,
+      factory: AirtableService.ɵfac,
+      providedIn: 'root'
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AirtableService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+        }];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/services/manage-property.service.ts": function srcAppServicesManagePropertyServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ManagePropertyService", function () {
+      return ManagePropertyService;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _airtable_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./airtable.service */
+    "./src/app/services/airtable.service.ts"); // import { AirtableService } from './../shared/airtable.service';
+
+
+    var ManagePropertyService =
+    /*#__PURE__*/
+    function () {
+      function ManagePropertyService(ats) {
+        _classCallCheck(this, ManagePropertyService);
+
+        this.ats = ats;
+      }
+
+      _createClass(ManagePropertyService, [{
+        key: "getPropertyList",
+        value: function getPropertyList() {
+          return this.ats.getTable().select({}).eachPage();
+        }
+      }, {
+        key: "addProperty",
+        value: function addProperty(property) {
+          return this.ats.getTable().create({
+            fields: {
+              name: property.name,
+              description: property.description,
+              size: property.size
+            }
+          });
+        }
+      }, {
+        key: "deleteProperty",
+        value: function deleteProperty(propertyId) {
+          return this.ats.getTable().destroy(propertyId);
+        }
+      }]);
+
+      return ManagePropertyService;
+    }();
+
+    ManagePropertyService.ɵfac = function ManagePropertyService_Factory(t) {
+      return new (t || ManagePropertyService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_airtable_service__WEBPACK_IMPORTED_MODULE_1__["AirtableService"]));
+    };
+
+    ManagePropertyService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: ManagePropertyService,
+      factory: ManagePropertyService.ɵfac,
+      providedIn: 'root'
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ManagePropertyService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], function () {
+        return [{
+          type: _airtable_service__WEBPACK_IMPORTED_MODULE_1__["AirtableService"]
+        }];
+      }, null);
     })();
     /***/
 
@@ -1153,119 +1346,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
     /***/
 
-  },
-
-  /***/
-  "./src/mockProperty.ts": function srcMockPropertyTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-
-    var mockProperties = [{
-      id: 1,
-      name: 'orci nullam molestie nibh in',
-      description: 'Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
-      size: 34
-    }, {
-      id: 2,
-      name: 'curae duis faucibus accumsan',
-      description: 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.',
-      size: 33
-    }, {
-      id: 3,
-      name: 'nunc donec quis orci eget',
-      description: 'Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.',
-      size: 22
-    }, {
-      id: 4,
-      name: 'nulla integer pede justo',
-      description: 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.',
-      size: 12
-    }, {
-      id: 5,
-      name: 'purus aliquet at',
-      description: 'Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.',
-      size: 17
-    }, {
-      id: 6,
-      name: 'pellentesque ultrices phasellus id',
-      description: 'Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
-      size: 33
-    }, {
-      id: 7,
-      name: 'quis libero nullam sit amet turpis',
-      description: 'Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.',
-      size: 13
-    }, {
-      id: 8,
-      name: 'eget tincidunt eget tempus',
-      description: 'Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
-      size: 34
-    }, {
-      id: 9,
-      name: 'amet sapien dignissim vestibulum vestibulum',
-      description: 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
-      size: 30
-    }, {
-      id: 10,
-      name: 'massa id nisl venenatis',
-      description: 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
-      size: 18
-    }, {
-      id: 11,
-      name: 'mattis pulvinar',
-      description: 'Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.',
-      size: 33
-    }, {
-      id: 12,
-      name: 'cras in purus eu magna vulputate',
-      description: 'Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      size: 19
-    }, {
-      id: 13,
-      name: 'in est risus auctor',
-      description: 'Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.',
-      size: 20
-    }, {
-      id: 14,
-      name: 'hac habitasse platea dictumst etiam faucibus',
-      description: 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.',
-      size: 21
-    }, {
-      id: 15,
-      name: 'in felis eu',
-      description: 'Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.',
-      size: 28
-    }, {
-      id: 16,
-      name: 'dapibus duis',
-      description: 'Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
-      size: 32
-    }, {
-      id: 17,
-      name: 'at nulla suspendisse',
-      description: 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
-      size: 48
-    }, {
-      id: 18,
-      name: 'natoque penatibus et magnis',
-      description: 'Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.',
-      size: 31
-    }, {
-      id: 19,
-      name: 'in est risus auctor sed tristique',
-      description: 'Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-      size: 13
-    }, {
-      id: 20,
-      name: 'eu orci',
-      description: 'In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.',
-      size: 21
-    }];
-    /* harmony default export */
-
-    __webpack_exports__["default"] = mockProperties;
-    /***/
   },
 
   /***/
