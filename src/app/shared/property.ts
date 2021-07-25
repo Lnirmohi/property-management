@@ -1,10 +1,10 @@
 export class Property {
-    id: number;
+    id: string;
     name: string;
     description: string;
     size: number;
 
-    constructor(id: number, name: string, description: string, size: number) {
+    constructor(id: string, name: string, description: string, size: number) {
         this.id = id;
         this.name = name;
         this.description = description;
